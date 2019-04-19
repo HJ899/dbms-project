@@ -1,4 +1,5 @@
 module.exports = {
-    USER: 'USR',
-    ADMIN: 'ADM'
+    roles: ['user', 'admin', 'employee'],
+    user: 'USR',
+    admin: 'ADM'
 }

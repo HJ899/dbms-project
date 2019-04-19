@@ -20,7 +20,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/register', registerRouters);
 app.use('/', indexRoutes);
 
-
+app.get('*', (req,res,next) => {
+    res.render('page-not-found', { pageTitle: "Page Not Found" });
+})
 
 app.listen(3000, () => {
     console.log('App listening on port 3000!');
