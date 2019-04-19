@@ -12,12 +12,12 @@ module.exports = class User {
     }
     save(){
         return db.execute(`INSERT INTO \
-        ${dbConfig.User.tableName} (${dbConfig.User.attr.email},${dbConfig.User.attr.password},\
-            ${dbConfig.User.attr.firstName},${dbConfig.User.attr.lastName},${dbConfig.User.attr.phone},\
-            ${dbConfig.User.attr.role},) values (?,?,?,?,?,?)`, 
+        \`${dbConfig.User.tableName}\` (\`${dbConfig.User.attr.email}\` , \`${dbConfig.User.attr.password}\`,\
+            \`${dbConfig.User.attr.firstName}\` , \`${dbConfig.User.attr.lastName}\` , \`${dbConfig.User.attr.phone}\` ,\
+            \`${dbConfig.User.attr.role}\`) values (?,?,?,?,?,?)`, 
         [this.email, this.password, this.firstName, this.lastName, this.phone, this.role]);
     }
     static findByEmail(email){
-        return db.execute(`SELECT * FROM ${dbConfig.User.tableName} WHERE ${dbConfig.User.attr.email} = ?`, [email]);
+        return db.execute(`SELECT * FROM \`${dbConfig.User.tableName}\` WHERE \`${dbConfig.User.attr.email}\` = ?`, [email]);
     }
 }

@@ -1,0 +1,44 @@
+#dropdownMenuButton:hover,
+#dropdownMenuButton:focus-within{
+    background: #f2f3f4;
+    color: black;
+}
+#dropdownMenuButton:focus{
+    border: #d9dde0;
+}
+
+.regForm{
+    width: 30%;
+}
+
+.btnSubmit{
+    margin-left: 12.5%; 
+    margin-right: 12.5%
+}
+
+.headerText{
+    text-align: center;
+    margin-bottom: 6%
+}
+
+@media(max-width: 1000px){
+    .regForm{
+        width: 35%;
+    }
+}
+
+@media(max-width: 800px){
+    .regForm{
+        width: 45%
+    }
+}
+@media(max-width: 600px){
+    .regForm{
+        width: 60%;
+    }
+}
+@media(max-width:400px){
+    .regForm{
+        width: 80%;
+    }
+}

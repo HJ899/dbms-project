@@ -1,0 +1,22 @@
+<%- include('./partials/head.ejs')%>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+    <%- include('./partials/nav.ejs') %>
+     <div class="container mx-auto my-5 justify-content-center regForm" >
+        <h1 class="headerText">Login</h1>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input required type="email" class="form-control" name="email" placeholder="johndoe@abc.com" id='inp_3'>
+            </div>
+            <div class="form-group mb-4">
+                <label for="password">Password</label>
+                <input required type="password" class="form-control" name="password" placeholder="password" id='inp_4'>
+            </div>
+            <hr>
+            <div class="form-group mt-4">
+                <button type="submit" class="btn btn-outline-primary w-75 btnSubmit">Login</button>
+            </div>
+        </form>
+    </div>
+<%- include('./partials/end.ejs') %>
